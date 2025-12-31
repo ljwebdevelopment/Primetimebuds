@@ -1,89 +1,105 @@
 :root {
-  --green: #659C5A;
-  --dark-green: #2A3728;
-  --light: #F7F8F6;
+  --brand: #659C5A;
+  --brand-dark: #2A3728;
+  --bg: #F7F8F6;
   --text: #111;
+  --border: #DADCDA;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
   color: var(--text);
-  background: var(--light);
   line-height: 1.6;
 }
 
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
 .header {
-  background: var(--dark-green);
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
+  background: white;
+  border-bottom: 1px solid var(--border);
 }
 
-.tagline {
-  opacity: 0.9;
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
 }
 
-.hours {
-  font-size: 0.9rem;
-  opacity: 0.85;
+.nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
 }
 
 .hero {
-  padding: 3rem 1rem;
+  background: linear-gradient(135deg, rgba(101,156,90,.25), transparent);
+  padding: 4rem 0;
   text-align: center;
+}
+
+.lead {
+  color: #444;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section--alt {
+  background: white;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .btn {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background: var(--green);
-  color: white;
+  padding: .75rem 1.5rem;
+  border-radius: 999px;
   text-decoration: none;
-  border-radius: 30px;
   font-weight: 600;
 }
 
-.about,
-.products,
-.visit {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem 1rem;
+.btn--primary {
+  background: var(--brand);
+  color: white;
 }
 
-.note {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.inventory {
+.inventory-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .card {
   background: white;
-  border-radius: 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
   padding: 1rem;
-  border: 1px solid #ddd;
-}
-
-.card h3 {
-  margin-top: 0;
 }
 
 .footer {
-  background: var(--dark-green);
+  background: var(--brand-dark);
   color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.85rem;
+  font-size: .9rem;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.muted {
+  color: #555;
 }
