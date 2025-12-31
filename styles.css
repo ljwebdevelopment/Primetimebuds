@@ -1,0 +1,89 @@
+:root {
+  --green: #659C5A;
+  --dark-green: #2A3728;
+  --light: #F7F8F6;
+  --text: #111;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  background: var(--light);
+  line-height: 1.6;
+}
+
+.header {
+  background: var(--dark-green);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.tagline {
+  opacity: 0.9;
+}
+
+.hours {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.about,
+.products,
+.visit {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.inventory {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.footer {
+  background: var(--dark-green);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+}
