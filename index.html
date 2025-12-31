@@ -1,61 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Prime Time Buds | Tahlequah, OK</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Prime Time Buds is a locally owned and operated cannabis store in Tahlequah, OK. Open daily 9AM–12AM including holidays." />
 
-  <meta name="description" content="Prime Time Buds is a locally owned cannabis dispensary in Tahlequah, OK. Open daily 9AM–12AM including holidays." />
+  <!-- ROOT-LEVEL CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="header">
-    <h1>Prime Time Buds</h1>
-    <p class="tagline">Tahlequah, Oklahoma</p>
-    <p class="hours">Open Daily 9AM – 12AM • Including Holidays</p>
+    <div class="container header__inner">
+      <div class="brand">
+        <!-- optional logo -->
+        <!-- <img src="logo.png" alt="Prime Time Buds logo" class="brand__logo"> -->
+        <div>
+          <strong>Prime Time Buds</strong><br>
+          <span class="muted">Tahlequah, Oklahoma</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#visit">Visit</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main id="main">
 
     <section class="hero">
-      <h2>Locally Owned. Award Winning.</h2>
-      <p>Voted Best of Cherokee County Reader’s Choice 5x since 2020.</p>
-      <a href="#products" class="btn">View Products</a>
+      <div class="container">
+        <h1>Locally Owned Cannabis Dispensary</h1>
+        <p class="lead">
+          Open Daily 9AM – 12AM • Including Holidays<br>
+          5× Best of Cherokee County Reader’s Choice Winner
+        </p>
+        <a class="btn btn--primary" href="#products">View Products</a>
+      </div>
     </section>
 
-    <section class="about">
-      <h2>About Prime Time Buds</h2>
-      <p>
-        Primetime Buds is a locally owned and operated cannabis store in Tahlequah, OK
-        committed to excellence, integrity, and customer-focused service.
-      </p>
+    <section class="section" id="about">
+      <div class="container">
+        <h2>About Prime Time Buds</h2>
+        <p>
+          Primetime Buds is a locally owned and operated cannabis store in Tahlequah, OK
+          committed to excellence, integrity, and customer-focused service.
+        </p>
+      </div>
     </section>
 
-    <section id="products" class="products">
-      <h2>Products (View Only)</h2>
-      <p class="note">Online listings are informational only. All purchases are in-store.</p>
+    <section class="section section--alt" id="products">
+      <div class="container">
+        <h2>Products (View Only)</h2>
+        <p class="muted">Online listings are informational only. In-store purchase required.</p>
 
-      <div id="inventory" class="inventory"></div>
+        <div id="inventoryGrid" class="inventory-grid"></div>
+      </div>
     </section>
 
-    <section class="visit">
-      <h2>Visit Us</h2>
-      <p>317 N Water Ave, Tahlequah, OK 74464</p>
-      <p><a href="tel:+19185064521">(918) 506-4521</a></p>
+    <section class="section" id="visit">
+      <div class="container">
+        <h2>Visit Us</h2>
+        <p>317 N Water Ave, Tahlequah, OK 74464</p>
+        <p><a href="tel:+19185064521">(918) 506-4521</a></p>
+        <p>Open Daily 9AM – 12AM</p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+        <details>
+          <summary>Can I buy online?</summary>
+          <p>No. This website is view-only. All purchases are in-store.</p>
+        </details>
+      </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Prime Time Buds</p>
-    <p>Website by LJ Web Development</p>
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Prime Time Buds</span>
+      <span>Website by LJ Web Development</span>
+    </div>
   </footer>
 
-  <!-- JS -->
+  <!-- ROOT-LEVEL JS -->
   <script src="script.js"></script>
 </body>
 </html>
