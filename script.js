@@ -1,23 +1,33 @@
-const inventory = [
-  { name: "Blueberry Kush", category: "Flower", type: "Indica" },
-  { name: "Lemon Gummies", category: "Edibles", type: "Edible" },
-  { name: "Hybrid Wax", category: "Concentrate", type: "Hybrid" },
-  { name: "OG Cartridge", category: "Vape", type: "Indica" }
-];
+// script.js (minimal)
+(() => {
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-const container = document.getElementById("inventory");
+  const navToggle = document.getElementById("navToggle");
+  const siteNav = document.getElementById("siteNav");
 
-inventory.forEach(item => {
-  const card = document.createElement("div");
-  card.className = "card";
+  if (!navToggle || !siteNav) return;
 
-  card.innerHTML = `
-    <h3>${item.name}</h3>
-    <p>${item.category}</p>
-    <p>${item.type}</p>
-  `;
+  const setOpen = (open) => {
+    siteNav.classList.toggle("is-open", open);
+    navToggle.setAttribute("aria-expanded", String(open));
+  };
 
-  container.appendChild(card);
-});
+  navToggle.addEventListener("click", () => {
+    setOpen(!siteNav.classList.contains("is-open"));
+  });
 
-document.getElementById("year").textContent = new Date().getFullYear();
+  siteNav.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => setOpen(false));
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!siteNav.classList.contains("is-open")) return;
+    if (siteNav.contains(e.target) || navToggle.contains(e.target)) return;
+    setOpen(false);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setOpen(false);
+  });
+})();
