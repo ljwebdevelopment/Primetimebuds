@@ -4,97 +4,484 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Prime Time Buds | Tahlequah, OK</title>
+  <meta name="description" content="Prime Time Buds is a locally owned and operated cannabis store in Tahlequah, OK. Open daily 9AM–12AM, including holidays. View products, location, and contact details." />
 
-  <meta name="description" content="Prime Time Buds is a locally owned and operated cannabis store in Tahlequah, OK. Open daily 9AM–12AM including holidays." />
+  <!-- Put logo.png in the SAME folder as index.html -->
+  <link rel="icon" href="logo.png" />
 
-  <!-- ROOT-LEVEL CSS -->
+  <!-- GitHub Pages-friendly: root CSS file -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="header">
-    <div class="container header__inner">
-      <div class="brand">
-        <!-- optional logo -->
-        <!-- <img src="logo.png" alt="Prime Time Buds logo" class="brand__logo"> -->
-        <div>
-          <strong>Prime Time Buds</strong><br>
-          <span class="muted">Tahlequah, Oklahoma</span>
-        </div>
+  <!-- Top bar -->
+  <div class="topbar" role="banner">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="pill">Open Daily 9AM – 12AM</span>
+        <span class="topbar__sep" aria-hidden="true">•</span>
+        <span>Including Holidays</span>
       </div>
+      <div class="topbar__right">
+        <a class="topbar__link" href="tel:+19185064521" aria-label="Call Prime Time Buds">(918) 506-4521</a>
+      </div>
+    </div>
+  </div>
 
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#visit">Visit</a>
-        <a href="#faq">FAQ</a>
+  <!-- Header / Nav -->
+  <header class="header" aria-label="Primary">
+    <div class="container header__inner">
+      <a class="brand" href="#home" aria-label="Prime Time Buds Home">
+        <img class="brand__logo" src="logo.png" alt="Prime Time Buds logo" />
+        <div class="brand__text">
+          <span class="brand__name">Prime Time Buds</span>
+          <span class="brand__meta">Tahlequah, Oklahoma</span>
+        </div>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="nav__bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav" id="siteNav" aria-label="Site">
+        <a class="nav__link" href="#home">Home</a>
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#products">Products</a>
+        <a class="nav__link" href="#visit">Visit Us</a>
+        <a class="nav__link" href="#faq">FAQ</a>
+        <a class="nav__link nav__link--cta" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="home" aria-label="Hero">
+      <div class="hero__bg" role="img" aria-label="Store photo placeholder"></div>
 
-    <section class="hero">
-      <div class="container">
-        <h1>Locally Owned Cannabis Dispensary</h1>
-        <p class="lead">
-          Open Daily 9AM – 12AM • Including Holidays<br>
-          5× Best of Cherokee County Reader’s Choice Winner
-        </p>
-        <a class="btn btn--primary" href="#products">View Products</a>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="kicker">Locally Owned • Open Late • Award-Winning</p>
+          <h1>Prime Time Buds in Tahlequah, OK</h1>
+          <p class="lead">
+            A locally owned and operated cannabis store committed to excellence, integrity, and customer-focused service.
+          </p>
+
+          <div class="hero__badges" aria-label="Recognition">
+            <div class="badge">
+              <span class="badge__title">Best of Cherokee County</span>
+              <span class="badge__sub">Reader’s Choice</span>
+            </div>
+            <div class="badge">
+              <span class="badge__title">5x Winner</span>
+              <span class="badge__sub">Since 2020</span>
+            </div>
+            <div class="badge">
+              <span class="badge__title">Open Daily</span>
+              <span class="badge__sub">9AM – 12AM</span>
+            </div>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#products">View Products</a>
+            <a class="btn btn--ghost" href="https://www.google.com/maps?q=317%20N%20Water%20Ave%20Tahlequah%20OK%2074464" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+
+          <p class="fineprint">
+            View-only online inventory. In-store purchase only.
+          </p>
+        </div>
       </div>
     </section>
 
+    <!-- Trust strip -->
+    <section class="trust">
+      <div class="container trust__inner">
+        <div class="trust__item">
+          <span class="trust__label">Reader’s Choice</span>
+          <span class="trust__value">Best of Cherokee County</span>
+        </div>
+        <div class="trust__item">
+          <span class="trust__label">Recognized</span>
+          <span class="trust__value">Since 2020</span>
+        </div>
+        <div class="trust__item">
+          <span class="trust__label">Locally Owned</span>
+          <span class="trust__value">Tahlequah, OK</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
     <section class="section" id="about">
-      <div class="container">
-        <h2>About Prime Time Buds</h2>
-        <p>
-          Primetime Buds is a locally owned and operated cannabis store in Tahlequah, OK
-          committed to excellence, integrity, and customer-focused service.
-        </p>
+      <div class="container split">
+        <div class="split__text">
+          <h2>About Prime Time Buds</h2>
+          <p>
+            Primetime Buds is a locally owned and operated cannabis store in Tahlequah, OK that is committed to excellence in every aspect of our business.
+            We uphold a standard of integrity bound by fairness, honesty, and personal responsibility.
+          </p>
+          <p>
+            Our distinction is the quality of service we bring to our customers. Accurate knowledge of our trade combined with ability is what makes us true professionals.
+            Above all, we are watchful of our customers' interests and make their concerns the basis of our business.
+          </p>
+
+          <div class="callouts">
+            <div class="callout">
+              <h3>Service First</h3>
+              <p>Knowledgeable staff and a customer-focused approach every day of the year.</p>
+            </div>
+            <div class="callout">
+              <h3>Selection</h3>
+              <p>Medical marijuana, edibles, wax carts, and more—organized for easy browsing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="split__media" aria-label="About image placeholder">
+          <div class="media media--placeholder" role="img" aria-label="Store interior placeholder"></div>
+          <div class="media__caption">Replace with an interior or team photo.</div>
+        </div>
       </div>
     </section>
 
+    <!-- Products -->
     <section class="section section--alt" id="products">
       <div class="container">
-        <h2>Products (View Only)</h2>
-        <p class="muted">Online listings are informational only. In-store purchase required.</p>
+        <div class="section__head">
+          <div>
+            <h2>Products</h2>
+            <p class="muted">Browse categories and view details. No online purchasing.</p>
+          </div>
 
-        <div id="inventoryGrid" class="inventory-grid"></div>
+          <div class="controls">
+            <label class="sr-only" for="searchInput">Search products</label>
+            <input id="searchInput" class="input" type="search" placeholder="Search products (name, type, strain)..." />
+
+            <label class="sr-only" for="categorySelect">Category</label>
+            <select id="categorySelect" class="select">
+              <option value="all">All categories</option>
+              <option value="Flower">Flower</option>
+              <option value="Edibles">Edibles</option>
+              <option value="Concentrates">Concentrates</option>
+              <option value="Vape Carts">Vape Carts</option>
+              <option value="Pre-Rolls">Pre-Rolls</option>
+              <option value="Accessories">Accessories</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category cards -->
+        <div class="grid grid--categories" aria-label="Product categories">
+          <article class="card card--category">
+            <div class="card__img" role="img" aria-label="Flower placeholder"></div>
+            <h3>Flower</h3>
+            <p>Indica, Sativa, Hybrid strains and rotating local options.</p>
+          </article>
+
+          <article class="card card--category">
+            <div class="card__img" role="img" aria-label="Edibles placeholder"></div>
+            <h3>Edibles</h3>
+            <p>Gummies, chocolates, and other edible options (varies daily).</p>
+          </article>
+
+          <article class="card card--category">
+            <div class="card__img" role="img" aria-label="Concentrates placeholder"></div>
+            <h3>Concentrates</h3>
+            <p>Wax and concentrate varieties—ask staff for current selection.</p>
+          </article>
+
+          <article class="card card--category">
+            <div class="card__img" role="img" aria-label="Vape carts placeholder"></div>
+            <h3>Vape Carts</h3>
+            <p>Cartridges and disposables (availability changes frequently).</p>
+          </article>
+
+          <article class="card card--category">
+            <div class="card__img" role="img" aria-label="Pre-rolls placeholder"></div>
+            <h3>Pre-Rolls</h3>
+            <p>Grab-and-go options for convenience.</p>
+          </article>
+
+          <article class="card card--category">
+            <div class="card__img" role="img" aria-label="Accessories placeholder"></div>
+            <h3>Accessories</h3>
+            <p>Grinders, papers, and other essentials (in-store).</p>
+          </article>
+        </div>
+
+        <!-- Inventory grid -->
+        <div class="inventory">
+          <div class="inventory__head">
+            <h3 class="inventory__title">View-Only Inventory</h3>
+            <p class="inventory__note">
+              Inventory shown for informational purposes only. In-store purchase required.
+            </p>
+          </div>
+
+          <div id="inventoryGrid" class="grid grid--inventory" aria-live="polite">
+            <!-- Injected by JS -->
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="visit">
+    <!-- Why choose -->
+    <section class="section">
       <div class="container">
-        <h2>Visit Us</h2>
-        <p>317 N Water Ave, Tahlequah, OK 74464</p>
-        <p><a href="tel:+19185064521">(918) 506-4521</a></p>
-        <p>Open Daily 9AM – 12AM</p>
+        <div class="section__head">
+          <div>
+            <h2>Why Choose Prime Time Buds</h2>
+            <p class="muted">A local shop built around service, knowledge, and consistency.</p>
+          </div>
+        </div>
+
+        <div class="grid grid--features" aria-label="Key features">
+          <div class="feature">
+            <h3>Locally Owned</h3>
+            <p>Committed to Tahlequah and focused on long-term trust.</p>
+          </div>
+          <div class="feature">
+            <h3>Knowledgeable Staff</h3>
+            <p>Accurate product knowledge and clear guidance without pressure.</p>
+          </div>
+          <div class="feature">
+            <h3>Open Late</h3>
+            <p>Open daily 9AM–12AM, including holidays.</p>
+          </div>
+          <div class="feature">
+            <h3>Quality Service</h3>
+            <p>Integrity, fairness, and customer interests first—always.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section section--alt" id="faq">
+    <!-- Visit -->
+    <section class="section section--alt" id="visit">
+      <div class="container split">
+        <div class="split__text">
+          <h2>Visit Us</h2>
+          <div class="info">
+            <div class="info__row">
+              <div class="info__label">Address</div>
+              <div class="info__value">
+                317 N Water Ave, Tahlequah, OK 74464
+                <div class="info__actions">
+                  <a class="link" href="https://www.google.com/maps?q=317%20N%20Water%20Ave%20Tahlequah%20OK%2074464" target="_blank" rel="noopener">Get Directions</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="info__row">
+              <div class="info__label">Phone</div>
+              <div class="info__value"><a class="link" href="tel:+19185064521">(918) 506-4521</a></div>
+            </div>
+
+            <div class="info__row">
+              <div class="info__label">Hours</div>
+              <div class="info__value">
+                Open daily 9AM – 12AM<br />
+                Including holidays
+              </div>
+            </div>
+          </div>
+
+          <div class="notice">
+            <strong>View-only online listings.</strong>
+            <span>All purchases must be made in-store.</span>
+          </div>
+        </div>
+
+        <div class="split__media" aria-label="Map placeholder">
+          <div class="map">
+            <iframe
+              title="Prime Time Buds Map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=317%20N%20Water%20Ave%20Tahlequah%20OK%2074464&output=embed">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
       <div class="container">
-        <h2>FAQ</h2>
-        <details>
-          <summary>Can I buy online?</summary>
-          <p>No. This website is view-only. All purchases are in-store.</p>
-        </details>
+        <div class="section__head">
+          <div>
+            <h2>FAQ</h2>
+            <p class="muted">Replace these placeholders with Prime Time Buds’ exact policies and details.</p>
+          </div>
+        </div>
+
+        <div class="accordion" data-accordion>
+          <details class="accordion__item">
+            <summary>Do I need a medical card?</summary>
+            <div class="accordion__content">
+              <p>Placeholder: Add your policy and any required documentation details here.</p>
+            </div>
+          </details>
+
+          <details class="accordion__item">
+            <summary>What forms of payment are accepted?</summary>
+            <div class="accordion__content">
+              <p>Placeholder: List payment methods accepted in-store.</p>
+            </div>
+          </details>
+
+          <details class="accordion__item">
+            <summary>Are you open on holidays?</summary>
+            <div class="accordion__content">
+              <p>Yes. We’re open daily 9AM–12AM, including holidays.</p>
+            </div>
+          </details>
+
+          <details class="accordion__item">
+            <summary>Can I buy online?</summary>
+            <div class="accordion__content">
+              <p>No. The website is view-only for informational purposes. All purchases are in-store.</p>
+            </div>
+          </details>
+        </div>
       </div>
     </section>
 
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta__inner">
+        <div class="cta__text">
+          <h2>Stop By Prime Time Buds Today</h2>
+          <p>Open late, locally owned, and voted Best of Cherokee County Reader’s Choice since 2020.</p>
+        </div>
+        <div class="cta__actions">
+          <a class="btn btn--primary" href="https://www.google.com/maps?q=317%20N%20Water%20Ave%20Tahlequah%20OK%2074464" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn btn--ghost" href="tel:+19185064521">Call Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--alt" id="contact">
+      <div class="container split">
+        <div class="split__text">
+          <h2>Contact</h2>
+          <p class="muted">Use this form as a placeholder. Replace with your preferred contact method.</p>
+
+          <form class="form" action="#" method="post" onsubmit="return false;">
+            <div class="form__row">
+              <label for="name">Name</label>
+              <input class="input" id="name" name="name" type="text" placeholder="Your name" />
+            </div>
+
+            <div class="form__row">
+              <label for="email">Email</label>
+              <input class="input" id="email" name="email" type="email" placeholder="you@email.com" />
+            </div>
+
+            <div class="form__row">
+              <label for="message">Message</label>
+              <textarea class="textarea" id="message" name="message" rows="5" placeholder="How can we help?"></textarea>
+            </div>
+
+            <button class="btn btn--primary" type="submit">Send Message</button>
+
+            <p class="fineprint">
+              Placeholder form only. For now, call <a class="link" href="tel:+19185064521">(918) 506-4521</a>.
+            </p>
+          </form>
+        </div>
+
+        <div class="split__media">
+          <div class="media media--placeholder" role="img" aria-label="Contact photo placeholder"></div>
+          <div class="media__caption">Replace with storefront photo or brand image.</div>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container footer__inner">
-      <span>© <span id="year"></span> Prime Time Buds</span>
-      <span>Website by LJ Web Development</span>
+      <div class="footer__brand">
+        <img class="footer__logo" src="logo.png" alt="Prime Time Buds logo" />
+        <p>
+          Prime Time Buds is committed to integrity, fairness, and high-quality service in Tahlequah, Oklahoma.
+        </p>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h3>Links</h3>
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <a href="#visit">Visit Us</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer__col">
+          <h3>Visit</h3>
+          <p>317 N Water Ave<br/>Tahlequah, OK 74464</p>
+          <p><a href="tel:+19185064521">(918) 506-4521</a></p>
+          <p>Open Daily 9AM – 12AM<br/>Including Holidays</p>
+        </div>
+
+        <div class="footer__col">
+          <h3>Notes</h3>
+          <p>View-only inventory. In-store purchase required.</p>
+          <p class="small">
+            Must meet Oklahoma requirements for medical cannabis purchasing.
+            Replace with your exact compliance language.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span>© <span id="year"></span> Prime Time Buds</span>
+        <span>Website by LJ Web Development</span>
+      </div>
     </div>
   </footer>
 
-  <!-- ROOT-LEVEL JS -->
+  <!-- Product details modal -->
+  <dialog class="modal" id="productModal" aria-label="Product details">
+    <div class="modal__inner">
+      <button class="modal__close" id="modalClose" aria-label="Close">×</button>
+
+      <div class="modal__body">
+        <div class="modal__img" id="modalImg" role="img" aria-label="Product image placeholder"></div>
+
+        <div class="modal__content">
+          <h3 id="modalTitle">Product Name</h3>
+
+          <div class="chips" id="modalChips">
+            <!-- injected -->
+          </div>
+
+          <p class="muted" id="modalDesc">
+            Placeholder description.
+          </p>
+
+          <div class="modal__meta" id="modalMeta">
+            <!-- injected -->
+          </div>
+
+          <div class="modal__notice">
+            View-only listing. Purchase in-store.
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- GitHub Pages-friendly: root JS file -->
   <script src="script.js"></script>
 </body>
 </html>
